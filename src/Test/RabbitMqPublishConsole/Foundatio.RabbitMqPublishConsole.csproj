@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Foundatio">
-      <HintPath>..\..\..\..\Downloads\Foundatio-master\Foundatio-master\src\Core\bin\Debug\Foundatio.dll</HintPath>
+      <HintPath>..\..\Core\bin\Debug\Foundatio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\RabbitMq\Foundatio.RabbitMq.csproj">
