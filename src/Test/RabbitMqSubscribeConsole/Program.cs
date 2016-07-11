@@ -13,7 +13,8 @@ namespace Foundatio.RabbitMqSubscribeConsole {
         //    string Data { get; set; }
         //}
         static void Main(string[] args) {
-            IMessageBus _messageBus = new RabbitMqMessageService("guest", "guest", "AmazonQueue", "AmazonQueueRoutingKey", "AmazonExchange", true);
+            IMessageBus _messageBus = new RabbitMqMessageService("guest", "guest", "AmazonQueue", "AmazonQueueRoutingKey", "AmazonExchange", true, true,
+                TimeSpan.FromMilliseconds(50));
             Console.WriteLine("Subscriber....");
             _messageBus.Subscribe<ISimpleMessage>(msg => {
                 Console.WriteLine(msg.Data);

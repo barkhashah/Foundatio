@@ -22,7 +22,7 @@ namespace Foundatio.RabbitMq.Tests.Messaging
             if (_messageBus != null)
                 return _messageBus;
 
-            _messageBus = new RabbitMqMessageService("guest", "guest", "AmazonQueue", "AmazonQueueRoutingKey", "AmazonExchange", true, loggerFactory: Log);
+            _messageBus = new RabbitMqMessageService("guest", "guest", "AmazonQueue", "AmazonQueueRoutingKey", "AmazonExchange", true, true, TimeSpan.FromMilliseconds(50), loggerFactory: Log);
             return _messageBus;
         }
 

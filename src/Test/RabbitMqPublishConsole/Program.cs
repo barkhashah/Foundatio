@@ -17,7 +17,7 @@ namespace Foundatio.RabbitMqPublishConsole {
     class Program {
         static void Main(string[] args) {
             IMessageBus _messageBus = new RabbitMqMessageService("guest", "guest", "AmazonQueue",
-                "AmazonQueueRoutingKey", "AmazonExchange", true);
+                "AmazonQueueRoutingKey", "AmazonExchange", true, true, TimeSpan.FromMilliseconds(50));
             string input;
             Console.WriteLine("Publisher....");
             Console.WriteLine("Enter the messages to send in new lines for the AmazonExchange / AmazonQueue");
